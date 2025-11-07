@@ -596,6 +596,12 @@ in
       description = "Use PCI Virtio transport, improves performance.";
     };
 
+    firecracker.extraConfig = mkOption {
+      type = types.attrs;
+      default = {};
+      description = "Extra config to merge into Firecracker JSON configuration";
+    };
+
     prettyProcnames = mkOption {
       type = types.bool;
       default = true;
