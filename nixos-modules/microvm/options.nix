@@ -602,6 +602,12 @@ in
       description = "Extra config to merge into Firecracker JSON configuration";
     };
 
+    firecracker.driveIoEngine = mkOption {
+      type = types.enum [ "Async" "Sync" ];
+      default = "Async";
+      description = "Type of IO engine to use for Firecracker drives (disks).";
+    };
+
     prettyProcnames = mkOption {
       type = types.bool;
       default = true;
